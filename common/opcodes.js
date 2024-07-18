@@ -7,8 +7,8 @@ const names =
 [
 	'OP_CREATE_OBJECT',            /*  0x00  */ 
 	'OP_FUNC_DECL',                /*  0x01  */ 
-	'FILLER_02',                 
-	'FILLER_03',                 
+	'FILLER_02',                   /*  0x02  */
+	'FILLER_03',                   /*  0x03  */
 	'OP_ADD_OBJECT',               /*  0x04  */
 	'OP_JMPIFNOT',                 /*  0x05  */ 
 	'OP_SAVEVAR_FLT',              /*  0x06  */
@@ -16,12 +16,12 @@ const names =
 	'OP_SETCUROBJECT',             /*  0x08  */
 	'OP_STR_TO_FLT',               /*  0x09  */ 
 	'OP_STR_TO_NONE',              /*  0x0A  */
-	'OP_JMPIF',                    /*  0x0B  */ 
+	'OP_JMPIFF',                   /*  0x0B  */ 
 	'OP_END_OBJECT',               /*  0x0C  */ 
 	'OP_CMPLT',                    /*  0x0D  */ 
 	'OP_CMPLE',                    /*  0x0E  */ 
 	'OP_JMPIFFNOT',                /*  0x0F  */
-	'OP_JMPIFF',                   /*  0x10  */ 
+	'OP_JMPIF',                    /*  0x10  */ 
 	'OP_SETCURFIELD',              /*  0x11  */ 
 	'OP_SETCURFIELD_ARRAY',        /*  0x12  */ 
 	'OP_JMPIF_NP',                 /*  0x13  */
@@ -33,14 +33,14 @@ const names =
 	'OP_CMPEQ',                    /*  0x19  */
 	'OP_CMPGR',                    /*  0x1A  */ 
 	'OP_CMPNE',                    /*  0x1B  */ 
-	'FILLER_1C',               
-	'FILLER_1D',               
-	'FILLER_1E',               
+	'OP_OR',                       /*  0x1C  */
+	'OP_AND',                      /*  0x1D  */
+	'OP_XOR',                      /*  0x1E  */
 	'OP_RETURN',                   /*  0x1F  */
 	'OP_CMPGE',                    /*  0x20  */ 
 	'OP_BITAND',                   /*  0x21  */ 
-	'FILLER_22',                  
-	'FILLER_23',                  
+	'OP_ONESCOMPLEMENT',           /*  0x22  */
+	'OP_SHR',                      /*  0x23  */
 	'OP_SHL',                      /*  0x24  */ 
 	'OP_BITOR',                    /*  0x25  */ 
 	'OP_LOADVAR_FLT',              /*  0x26  */ 
@@ -49,11 +49,11 @@ const names =
 	'OP_LOADVAR_STR',              /*  0x29  */ 
 	'OP_LOADFIELD_FLT',            /*  0x2A  */ 
 	'OP_LOADFIELD_STR',            /*  0x2B  */ 
-	'FILLER_2C',                 
+	'OP_SAVEFIELD_UINT',           /*  0x2C  */
 	'OP_CALLFUNC',                 /*  0x2D  */ 
 	'OP_REWIND_STR',               /*  0x2E  */
 	'OP_PUSH_FRAME',               /*  0x2F  */
-	'FILLER_30',                 
+	'OP_BREAK',                    /*  0x30  */
 	'OP_SAVEVAR_UINT',             /*  0x31  */
 	'OP_SUB',                      /*  0x32  */ 
 	'OP_MUL',                      /*  0x33  */ 
@@ -70,7 +70,7 @@ const names =
 	'OP_LOADVAR_UINT',             /*  0x3E  */ 
 	'OP_FLT_TO_UINT',              /*  0x3F  */
 	'OP_FLT_TO_STR',               /*  0x40  */ 
-	'FILLER_41',                 
+	'OP_INVALID',                  /*  0x41  */
 	'OP_ADVANCE_STR',              /*  0x42  */ 
 	'OP_ADVANCE_STR_APPENDCHAR',   /*  0x43  */
 	'OP_TERMINATE_REWIND_STR',     /*  0x44  */
@@ -88,8 +88,7 @@ const names =
 	'OP_LOADIMMED_STR',            /*  0x50  */ 
 	'OP_LOADIMMED_IDENT',          /*  0x51  */ 
 	'OP_CALLFUNC_RESOLVE',         /*  0x52  */
-	'FILLER_53',                 
-];
+];                                 
 
 const enums = enumerate (names);
 

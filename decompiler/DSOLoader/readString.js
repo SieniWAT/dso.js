@@ -45,7 +45,7 @@ const readStringTable = function ()
 	{
 		const char = strings.charAt (i);
 
-		if ( char === '\0' )
+		if ( char === '\0' || char === '\xce' )
 		{
 			table[currIndex] = currString;
 
